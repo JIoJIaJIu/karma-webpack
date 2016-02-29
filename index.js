@@ -153,7 +153,8 @@ Plugin.prototype.readFile = function(file, callback) {
 				callback(null, Buffer.concat(contents));
 			});
 		} else {
-			middleware.fileSystem.readFile("/_karma_webpack_/" + file.replace(/\\/g, "/"), callback);
+			//middleware.fileSystem.readFile("/_karma_webpack_/" + file.replace(/\\/g, "/"), callback);
+			middleware.fileSystem.readFile("/_karma_webpack_/main", callback);
 		}
 	}
 	if(!this.waiting)
